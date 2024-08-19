@@ -35,22 +35,22 @@ slime_body.png::CompressedTexture2D::8645940357922743702::1723627744::1723777006
 slime_body_hurt.png::CompressedTexture2D::3723476765009385039::1723627744::1723777006::1::::<><>::
 slime_face.png::CompressedTexture2D::6595643196702037820::1723627744::1723777006::1::::<><>::
 slime_hurt_eyes.png::CompressedTexture2D::4791010527445338927::1723627745::1723777006::1::::<><>::
-::res://game/::1724056995
+::res://game/::1724057419
 bullet.gd::GDScript::-1::1724037076::0::1::::<>Area2D<>::
 bullet.tscn::PackedScene::2824330268736523687::1724039006::0::1::::<><>::uid://dftkbqwsfd68r::::res://pistol/projectile.png<>res://game/bullet.gd
 game.gd::GDScript::-1::1724051498::0::1::::<>Node2D<>::
-game.tscn::PackedScene::358317070002882216::1724056995::0::1::::<><>::res://game/game.gd<>uid://bu3aixg7n3elv::::res://game/player.tscn<>uid://5elrqae6s34u::::res://game/tree.tscn
+game.tscn::PackedScene::358317070002882216::1724057419::0::1::::<><>::res://game/game.gd<>uid://bu3aixg7n3elv::::res://game/player.tscn<>uid://5elrqae6s34u::::res://game/tree.tscn
 game_manager.gd::GDScript::-1::1724052756::0::1::::<>Node<>::
 main_menu.gd::GDScript::-1::1724051466::0::1::::<>Control<>::
-main_menu.tscn::PackedScene::2263618100424725258::1724056946::0::1::::<><>::res://game/main_menu.gd<>uid://hf7dfk2uhbw6::::res://splash/Screenshot 2024-08-19 151653.png
+main_menu.tscn::PackedScene::2263618100424725258::1724057419::0::1::::<><>::res://game/main_menu.gd<>uid://hf7dfk2uhbw6::::res://splash/Screenshot 2024-08-19 151653.png
 pistol.gd::GDScript::-1::1724052538::0::1::::<>Area2D<>::
-pistol.tscn::PackedScene::3880057215558904803::1724056873::0::1::::<><>::res://game/pistol.gd<>uid://cswb5do8rrj7q::::res://pistol/pistol.png
-player.gd::GDScript::-1::1724054174::0::1::::<>CharacterBody2D<>::
-player.tscn::PackedScene::3848015638696952907::1724056872::0::1::::<><>::res://game/player.gd<>uid://pbmyh1qru7p::::res://characters/happy_boo/happy_boo.tscn<>uid://bvjr8fvmbmplb::::res://game/pistol.tscn
+pistol.tscn::PackedScene::3880057215558904803::1724057419::0::1::::<><>::res://game/pistol.gd<>uid://cswb5do8rrj7q::::res://pistol/pistol.png
+player.gd::GDScript::-1::1724057418::0::1::::<>CharacterBody2D<>::
+player.tscn::PackedScene::3848015638696952907::1724057419::0::1::::<><>::res://game/player.gd<>uid://pbmyh1qru7p::::res://characters/happy_boo/happy_boo.tscn<>uid://bvjr8fvmbmplb::::res://game/pistol.tscn
 Screenshot 2024-08-19 151653.png::CompressedTexture2D::6986777148384784574::1724051843::1724051844::1::::<><>::
 slime_mob.gd::GDScript::-1::1724049828::0::1::::<>CharacterBody2D<>::
-slime_mob.tscn::PackedScene::4704584406855468393::1724056873::0::1::::<><>::res://game/slime_mob.gd<>uid://ogik4s70pgwl::::res://characters/slime/slime.tscn
-tree.tscn::PackedScene::2114621906171536222::1724056873::0::1::::<><>::uid://caqfk2xng5v5u::::res://trees/pine_tree.png
+slime_mob.tscn::PackedScene::4704584406855468393::1724057419::0::1::::<><>::res://game/slime_mob.gd<>uid://ogik4s70pgwl::::res://characters/slime/slime.tscn
+tree.tscn::PackedScene::2114621906171536222::1724057419::0::1::::<><>::uid://caqfk2xng5v5u::::res://trees/pine_tree.png
 ::res://pistol/::1723777006
 pistol.png::CompressedTexture2D::6081771334990092076::1723627745::1723777006::1::::<><>::
 projectile.png::CompressedTexture2D::7550039277502144023::1723627745::1723777006::1::::<><>::
@@ -67,8 +67,9 @@ circle_32.png::CompressedTexture2D::6271663262871881894::1723627745::1723777006:
 smoke_explosion.gd::GDScript::-1::1723627745::0::1::::<>Node2D<>::
 smoke_explosion.gdshader::Shader::-1::1723627745::0::1::::<><>::
 smoke_explosion.tscn::PackedScene::7675803860678853612::1723627745::0::1::::<><>::res://smoke_explosion/smoke_explosion.gdshader<>res://smoke_explosion/smoke_explosion.gd
-::res://splash/::1724051853
+::res://splash/::1724057627
 icon-dark.png::CompressedTexture2D::849074345033073827::1723688366::1724037472::1::::<><>::
+maxresdefault.jpg::CompressedTexture2D::2507143644713252906::1724057612::1724057635::1::::<><>::
 Screenshot 2024-08-19 151653.png::CompressedTexture2D::503592374705322215::1724051853::1724051853::1::::<><>::
 ::res://trees/::1723777006
 pine_tree.png::CompressedTexture2D::4806194308614878228::1723627745::1723777006::1::::<><>::

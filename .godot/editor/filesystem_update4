@@ -5,3 +5,4 @@ res://game/pistol.tscn
 res://game/slime_mob.tscn
 res://game/main_menu.tscn
 res://game/player.gd
+res://README.md
