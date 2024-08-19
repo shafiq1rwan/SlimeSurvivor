@@ -33,6 +33,7 @@ script = ExtResource("1_f4hy5")
 shape = SubResource("CircleShape2D_jdgdk")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position_smoothing_enabled = true
 
 [node name="Pistol" parent="." instance=ExtResource("3_4ddpb")]
 position = Vector2(0, -40)
