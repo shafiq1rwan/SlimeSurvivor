@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=3 uid="uid://b8a622odbta4h"]
+
+[ext_resource type="Script" path="res://game/slime_mob.gd" id="1_63fuy"]
+[ext_resource type="PackedScene" uid="uid://ogik4s70pgwl" path="res://characters/slime/slime.tscn" id="1_nra6f"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0x37d"]
+radius = 49.0102
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pn6u1"]
+bg_color = Color(0.164706, 0.164706, 0.164706, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5bp0o"]
+bg_color = Color(1, 0.326038, 0.395398, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[node name="SlimeMob" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 3
+script = ExtResource("1_63fuy")
+
+[node name="Slime" parent="." instance=ExtResource("1_nra6f")]
+unique_name_in_owner = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -28)
+shape = SubResource("CircleShape2D_0x37d")
+
+[node name="SlimeProgressBar" type="ProgressBar" parent="."]
+unique_name_in_owner = true
+offset_left = -41.0
+offset_top = -106.0
+offset_right = 41.0
+offset_bottom = -86.0
+theme_override_styles/background = SubResource("StyleBoxFlat_pn6u1")
+theme_override_styles/fill = SubResource("StyleBoxFlat_5bp0o")
+max_value = 3.0
+value = 3.0
+show_percentage = false

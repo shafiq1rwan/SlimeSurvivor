@@ -1,0 +1,58 @@
+[gd_scene load_steps=8 format=3 uid="uid://bu3aixg7n3elv"]
+
+[ext_resource type="Script" path="res://game/player.gd" id="1_f4hy5"]
+[ext_resource type="PackedScene" uid="uid://pbmyh1qru7p" path="res://characters/happy_boo/happy_boo.tscn" id="1_t7bx8"]
+[ext_resource type="PackedScene" uid="uid://bvjr8fvmbmplb" path="res://game/pistol.tscn" id="3_4ddpb"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jdgdk"]
+radius = 31.3209
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7wfdf"]
+radius = 31.4006
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d3iwv"]
+bg_color = Color(0.165656, 0.165656, 0.165656, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_20esf"]
+bg_color = Color(1.92523e-07, 0.800955, 0.495531, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_f4hy5")
+
+[node name="HappyBoo" parent="." instance=ExtResource("1_t7bx8")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_jdgdk")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Pistol" parent="." instance=ExtResource("3_4ddpb")]
+position = Vector2(0, -40)
+
+[node name="HurtBox" type="Area2D" parent="."]
+unique_name_in_owner = true
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
+shape = SubResource("CircleShape2D_7wfdf")
+debug_color = Color(0.894923, 0.000210235, 0.779726, 0.42)
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+unique_name_in_owner = true
+offset_left = -44.0
+offset_top = -114.0
+offset_right = 39.0
+offset_bottom = -99.0
+theme_override_styles/background = SubResource("StyleBoxFlat_d3iwv")
+theme_override_styles/fill = SubResource("StyleBoxFlat_20esf")
+value = 100.0
+show_percentage = false
