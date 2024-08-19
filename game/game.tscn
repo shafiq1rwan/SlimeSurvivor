@@ -14,26 +14,9 @@ point_count = 6
 y_sort_enabled = true
 script = ExtResource("1_ixp5m")
 
-[node name="HUD" type="CanvasLayer" parent="."]
-
-[node name="LabelPoint" type="Label" parent="HUD"]
-unique_name_in_owner = true
-offset_left = 6.0
-offset_right = 170.0
-offset_bottom = 55.0
-theme_override_colors/font_color = Color(0.12549, 0.12549, 0.12549, 0.870588)
-theme_override_font_sizes/font_size = 40
-text = "Points: 0"
-
-[node name="Tiles" type="CanvasLayer" parent="."]
-layer = -10
-
-[node name="ColorRect" type="ColorRect" parent="Tiles"]
-offset_right = 1284.0
-offset_bottom = 723.0
-
 [node name="Player" parent="." instance=ExtResource("1_ru1y4")]
-position = Vector2(630, 383)
+position = Vector2(631, 383)
+platform_floor_layers = 4294901760
 
 [node name="Path2D" type="Path2D" parent="Player"]
 position = Vector2(-630, -383)
@@ -64,6 +47,54 @@ position = Vector2(869, 287)
 
 [node name="Tree7" parent="." instance=ExtResource("2_4s281")]
 position = Vector2(1223, 91)
+
+[node name="Tree8" parent="." instance=ExtResource("2_4s281")]
+position = Vector2(-143, -2)
+
+[node name="Tree9" parent="." instance=ExtResource("2_4s281")]
+position = Vector2(-54, 270)
+
+[node name="Tree10" parent="." instance=ExtResource("2_4s281")]
+position = Vector2(644, 768)
+
+[node name="Tree11" parent="." instance=ExtResource("2_4s281")]
+position = Vector2(590, 807)
+
+[node name="Tree12" parent="." instance=ExtResource("2_4s281")]
+position = Vector2(1322, 540)
+
+[node name="Tree13" parent="." instance=ExtResource("2_4s281")]
+position = Vector2(569, -40)
+
+[node name="Tree14" parent="." instance=ExtResource("2_4s281")]
+position = Vector2(-205, 678)
+
+[node name="Tree15" parent="." instance=ExtResource("2_4s281")]
+position = Vector2(1009, 10)
+
+[node name="Tree16" parent="." instance=ExtResource("2_4s281")]
+position = Vector2(163, 748)
+
+[node name="Tree17" parent="." instance=ExtResource("2_4s281")]
+position = Vector2(1253, 825)
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="LabelPoint" type="Label" parent="HUD"]
+unique_name_in_owner = true
+offset_left = 6.0
+offset_right = 170.0
+offset_bottom = 55.0
+theme_override_colors/font_color = Color(0.12549, 0.12549, 0.12549, 0.870588)
+theme_override_font_sizes/font_size = 40
+text = "Points: 0"
+
+[node name="Tiles" type="CanvasLayer" parent="."]
+layer = -10
+
+[node name="ColorRect" type="ColorRect" parent="Tiles"]
+offset_right = 1284.0
+offset_bottom = 723.0
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.7
@@ -97,23 +128,5 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 70
 text = "Game Over"
 
-[node name="ReloadButton" type="Button" parent="GameOverScreen/ColorRect"]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -87.0
-offset_top = -304.0
-offset_right = 87.0
-offset_bottom = -227.0
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_font_sizes/font_size = 50
-text = "Reload
-"
-
 [connection signal="health_depleted" from="Player" to="." method="_on_player_health_depleted"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
-[connection signal="pressed" from="GameOverScreen/ColorRect/ReloadButton" to="." method="_on_reload_button_pressed"]

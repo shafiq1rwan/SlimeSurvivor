@@ -1,9 +1,7 @@
-res://game/pistol.tscn
-res://game/pistol.gd
+res://game/tree.tscn
 res://game/game.tscn
 res://game/player.tscn
+res://game/pistol.tscn
 res://game/slime_mob.tscn
-res://game/tree.tscn
 res://game/main_menu.tscn
-res://game/game_manager.gd
 res://game/player.gd

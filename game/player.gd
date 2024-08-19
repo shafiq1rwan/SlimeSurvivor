@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 signal health_depleted
 var health = 100.0
-var dash_speed = 2000
+var dash_speed = 3000
 
 func _physics_process(delta):
 	var direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")

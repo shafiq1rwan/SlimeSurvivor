@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bvjr8fvmbmplb" path="res://game/pistol.tscn" id="3_4ddpb"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jdgdk"]
-radius = 31.3209
+radius = 31.0483
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7wfdf"]
 radius = 31.4006
@@ -25,11 +25,13 @@ corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
 [node name="Player" type="CharacterBody2D"]
+platform_floor_layers = 0
 script = ExtResource("1_f4hy5")
 
 [node name="HappyBoo" parent="." instance=ExtResource("1_t7bx8")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+z_index = 30
 shape = SubResource("CircleShape2D_jdgdk")
 
 [node name="Camera2D" type="Camera2D" parent="."]
