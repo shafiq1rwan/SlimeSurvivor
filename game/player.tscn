@@ -51,6 +51,7 @@ debug_color = Color(0.894923, 0.000210235, 0.779726, 0.42)
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
 unique_name_in_owner = true
+visible = false
 offset_left = -44.0
 offset_top = -114.0
 offset_right = 39.0

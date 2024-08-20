@@ -3,7 +3,9 @@ extends Node2D
 var is_paused = false
 
 func _process(_delta):
-	%LabelPoint.text = "Points: " + str(GameManager.HIT_POINTS)
+	%LabelPoint.text = "Points: " + str(GameManager.TOTAL_POINTS)
+	%PlayerProgressBar.value = GameManager.HIT_POINTS
+	%LabelLevel.text = "Level: " + str(GameManager.CURRENT_LEVEL)
 	if Input.is_action_just_pressed("pause"):
 		pauseMenu()
 
@@ -23,7 +25,6 @@ func spawn_mob():
 	SLIME_MOB.global_position = %PathFollow2D.global_position
 	add_child(SLIME_MOB)
 	GameManager.TOTAL_CURRENT_MONSTER += 1
-	#print("TOTAL_CURRENT_MONSTER: "+ str(GameManager.TOTAL_CURRENT_MONSTER))
 
 func spawn_trees():
 	pass

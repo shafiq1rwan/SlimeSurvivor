@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://fdtou3s0nwts"]
+[gd_scene load_steps=9 format=3 uid="uid://fdtou3s0nwts"]
 
 [ext_resource type="Script" path="res://game/game.gd" id="1_ixp5m"]
 [ext_resource type="PackedScene" uid="uid://bu3aixg7n3elv" path="res://game/player.tscn" id="1_ru1y4"]
@@ -9,6 +9,27 @@ _data = {
 "points": PackedVector2Array(0, 0, 0, 0, -45, -109, 0, 0, 0, 0, 1354, -106, 0, 0, 0, 0, 1356, 792, 0, 0, 0, 0, 650, 792, 0, 0, 0, 0, -47, 790, 0, 0, 0, 0, -45, -109)
 }
 point_count = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bic6t"]
+bg_color = Color(0.913725, 0.913725, 0.913725, 0.858824)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sc23h"]
+bg_color = Color(0.164706, 0.164706, 0.164706, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fs7gt"]
+bg_color = Color(0, 0.8, 0.494118, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lc5dm"]
 bg_color = Color(1, 1, 1, 1)
@@ -88,17 +109,53 @@ position = Vector2(1253, 825)
 
 [node name="HUD" type="CanvasLayer" parent="."]
 
-[node name="LabelPoint" type="Label" parent="HUD"]
+[node name="Panel" type="Panel" parent="HUD"]
+offset_left = 9.0
+offset_top = 11.0
+offset_right = 207.0
+offset_bottom = 168.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_bic6t")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HUD/Panel"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 8.0
+offset_right = 185.0
+offset_bottom = 138.0
+
+[node name="Player HP" type="Label" parent="HUD/Panel/VBoxContainer"]
 unique_name_in_owner = true
-offset_left = 6.0
-offset_right = 170.0
-offset_bottom = 55.0
+layout_mode = 2
 theme_override_colors/font_color = Color(0.12549, 0.12549, 0.12549, 0.870588)
-theme_override_font_sizes/font_size = 40
-text = "Points: 0"
+theme_override_font_sizes/font_size = 25
+text = "HP
+"
+
+[node name="PlayerProgressBar" type="ProgressBar" parent="HUD/Panel/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_sc23h")
+theme_override_styles/fill = SubResource("StyleBoxFlat_fs7gt")
+value = 100.0
+
+[node name="LabelPoint" type="Label" parent="HUD/Panel/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.12549, 0.12549, 0.12549, 0.870588)
+theme_override_font_sizes/font_size = 20
+text = "Total Mob: 0"
+
+[node name="LabelLevel" type="Label" parent="HUD/Panel/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.12549, 0.12549, 0.12549, 0.870588)
+theme_override_font_sizes/font_size = 20
+text = "Level: 1"
 
 [node name="Tiles" type="CanvasLayer" parent="."]
 layer = -10
+visible = false
 
 [node name="ColorRect" type="ColorRect" parent="Tiles"]
 offset_right = 1284.0

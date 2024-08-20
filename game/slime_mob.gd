@@ -27,7 +27,7 @@ func take_damage():
 	
 	if health == 0:
 		slime_mob_depleted.emit()
-		GameManager.HIT_POINTS += 1
+		GameManager.TOTAL_POINTS += 1
 		GameManager.TOTAL_DEFEATED_MONSTER += 1
 		queue_free()
 		

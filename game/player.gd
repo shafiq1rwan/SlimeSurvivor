@@ -24,7 +24,8 @@ func _physics_process(delta):
 	
 	if overlapping_mobs.size() > 0:
 		health -= DAMAGE_RATE * overlapping_mobs.size() * delta
-		%ProgressBar.value = health
+		GameManager.HIT_POINTS = health
+		#%ProgressBar.value = health
 		if health <= 0.0:
 			health_depleted.emit()
 			
