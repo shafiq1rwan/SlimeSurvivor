@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://fdtou3s0nwts"]
+[gd_scene load_steps=6 format=3 uid="uid://fdtou3s0nwts"]
 
 [ext_resource type="Script" path="res://game/game.gd" id="1_ixp5m"]
 [ext_resource type="PackedScene" uid="uid://bu3aixg7n3elv" path="res://game/player.tscn" id="1_ru1y4"]
@@ -10,7 +10,15 @@ _data = {
 }
 point_count = 6
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lc5dm"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
 [node name="Game" type="Node2D"]
+process_mode = 1
 y_sort_enabled = true
 script = ExtResource("1_ixp5m")
 
@@ -112,7 +120,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.72549)
 
-[node name="Label" type="Label" parent="GameOverScreen/ColorRect"]
+[node name="GameOverLabel" type="Label" parent="GameOverScreen/ColorRect"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -128,5 +136,52 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 70
 text = "Game Over"
 
+[node name="PausedScreen" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="PausedScreen"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.72549)
+
+[node name="PauseLabel" type="Label" parent="PausedScreen/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 70
+text = "Paused"
+
+[node name="ResumeButton" type="Button" parent="PausedScreen"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -114.0
+offset_top = -299.0
+offset_right = 114.0
+offset_bottom = -210.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_lc5dm")
+text = "Resume"
+
 [connection signal="health_depleted" from="Player" to="." method="_on_player_health_depleted"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="PausedScreen/ResumeButton" to="." method="_on_resume_button_pressed"]

@@ -1,8 +1,13 @@
-res://game/tree.tscn
 res://game/game.tscn
 res://game/player.tscn
 res://game/pistol.tscn
 res://game/slime_mob.tscn
+res://game/tree.tscn
 res://game/main_menu.tscn
-res://game/player.gd
-res://README.md
+res://game/bullet.tscn
+res://game/bullet.gd
+res://game/pistol.gd
+res://pistol/muzzle_flash/muzzle_flash.tscn
+res://game/slime_mob.gd
+res://pistol/muzzle_flash/muzzle_flash.gd
+res://game/game.gd

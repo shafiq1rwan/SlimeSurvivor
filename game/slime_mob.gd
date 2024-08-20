@@ -22,6 +22,7 @@ func take_damage():
 		slime_mob_depleted.emit()
 		GameManager.HIT_POINTS += 1
 		queue_free()
+		
 		const SMOKE_EXPLOSION = preload("res://smoke_explosion/smoke_explosion.tscn")
 		var smoke = SMOKE_EXPLOSION.instantiate()
 		get_parent().add_child(smoke)

@@ -1,7 +1,21 @@
 extends Node2D
 
-func _physics_process(delta):
+var is_paused = false
+
+func _process(_delta):
 	%LabelPoint.text = "Points: " + str(GameManager.HIT_POINTS)
+	if Input.is_action_just_pressed("pause"):
+		pauseMenu()
+
+func pauseMenu():
+	if is_paused:
+		%PausedScreen.visible = true
+		Engine.time_scale = 0
+	else:
+		%PausedScreen.visible = false
+		Engine.time_scale = 1
+		
+	is_paused = !is_paused
 
 func spawn_mob():
 	var SLIME_MOB = preload("res://game/slime_mob.tscn").instantiate()
@@ -17,7 +31,9 @@ func _on_timer_timeout():
 
 func _on_player_health_depleted():
 	%GameOverScreen.visible = true
-	get_tree().paused = true
+	Engine.time_scale = 0
 
-func _on_reload_button_pressed():
-	get_tree().change_scene_to_file("res://game/game.tscn")
+func _on_resume_button_pressed():
+	%PausedScreen.visible = false
+	Engine.time_scale = 1
+	is_paused = !is_paused
