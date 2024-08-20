@@ -22,12 +22,22 @@ func spawn_mob():
 	%PathFollow2D.progress_ratio = randf()
 	SLIME_MOB.global_position = %PathFollow2D.global_position
 	add_child(SLIME_MOB)
+	GameManager.TOTAL_CURRENT_MONSTER += 1
+	#print("TOTAL_CURRENT_MONSTER: "+ str(GameManager.TOTAL_CURRENT_MONSTER))
 
 func spawn_trees():
 	pass
 
 func _on_timer_timeout():
-	spawn_mob()
+	if GameManager.TOTAL_CURRENT_MONSTER < GameManager.TOTAL_MINIMUM_MONSTER:
+		spawn_mob()
+	
+	if GameManager.TOTAL_DEFEATED_MONSTER == GameManager.TOTAL_CURRENT_MONSTER:
+		GameManager.CURRENT_LEVEL += 1
+		GameManager.TOTAL_CURRENT_MONSTER = 0
+		GameManager.TOTAL_DEFEATED_MONSTER = 0
+		GameManager.TOTAL_MINIMUM_MONSTER += 2
+		print("Masuk condition match sini")
 
 func _on_player_health_depleted():
 	%GameOverScreen.visible = true

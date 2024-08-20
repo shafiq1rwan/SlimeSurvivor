@@ -11,3 +11,5 @@ res://pistol/muzzle_flash/muzzle_flash.tscn
 res://game/slime_mob.gd
 res://pistol/muzzle_flash/muzzle_flash.gd
 res://game/game.gd
+res://pistol/impact/impact.tscn
+res://game/game_manager.gd
