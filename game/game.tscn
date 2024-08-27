@@ -57,28 +57,29 @@ position = Vector2(-45, -109)
 rotation = 0.00214439
 
 [node name="LabelInstruction" type="Label" parent="."]
-offset_left = 503.0
-offset_top = 231.0
-offset_right = 777.0
-offset_bottom = 273.0
-theme_override_colors/font_color = Color(0.205117, 0.205117, 0.205117, 1)
+offset_left = 489.0
+offset_top = 192.0
+offset_right = 832.0
+offset_bottom = 279.0
+theme_override_colors/font_color = Color(0.548963, 0.548963, 0.548963, 1)
 theme_override_font_sizes/font_size = 30
-text = "Use WASD to Move"
+text = "Use WASD to Move
+Press Left-click to shoot"
 
 [node name="Tree" parent="." instance=ExtResource("2_4s281")]
 position = Vector2(251, 219)
 
 [node name="Tree2" parent="." instance=ExtResource("2_4s281")]
-position = Vector2(139, 549)
+position = Vector2(163, 511)
 
 [node name="Tree3" parent="." instance=ExtResource("2_4s281")]
 position = Vector2(1007, 611)
 
 [node name="Tree4" parent="." instance=ExtResource("2_4s281")]
-position = Vector2(942, 186)
+position = Vector2(1003, 173)
 
 [node name="Tree5" parent="." instance=ExtResource("2_4s281")]
-position = Vector2(1017, 257)
+position = Vector2(1099, 312)
 
 [node name="Tree6" parent="." instance=ExtResource("2_4s281")]
 position = Vector2(865, 259)
@@ -147,6 +148,7 @@ layout_mode = 2
 theme_override_styles/background = SubResource("StyleBoxFlat_sc23h")
 theme_override_styles/fill = SubResource("StyleBoxFlat_fs7gt")
 value = 100.0
+show_percentage = false
 
 [node name="LabelPoint" type="Label" parent="HUD/Panel/VBoxContainer"]
 unique_name_in_owner = true
@@ -168,6 +170,7 @@ layer = -10
 [node name="ColorRect" type="ColorRect" parent="Tiles"]
 offset_right = 1284.0
 offset_bottom = 723.0
+color = Color(0.874113, 0.967028, 0.949696, 1)
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.7
