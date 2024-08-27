@@ -59,6 +59,15 @@ unique_name_in_owner = true
 position = Vector2(-45, -109)
 rotation = 0.00214439
 
+[node name="LabelInstruction" type="Label" parent="."]
+offset_left = 503.0
+offset_top = 231.0
+offset_right = 777.0
+offset_bottom = 273.0
+theme_override_colors/font_color = Color(0.205117, 0.205117, 0.205117, 1)
+theme_override_font_sizes/font_size = 30
+text = "Use WASD to Move"
+
 [node name="Tree" parent="." instance=ExtResource("2_4s281")]
 position = Vector2(251, 219)
 
@@ -172,6 +181,7 @@ text = "Pause"
 
 [node name="Tiles" type="CanvasLayer" parent="."]
 layer = -10
+visible = false
 
 [node name="ColorRect" type="ColorRect" parent="Tiles"]
 offset_right = 1284.0
