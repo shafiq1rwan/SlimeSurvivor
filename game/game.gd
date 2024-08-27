@@ -33,6 +33,9 @@ func _on_timer_timeout():
 	if GameManager.TOTAL_CURRENT_MONSTER < GameManager.TOTAL_MINIMUM_MONSTER:
 		spawn_mob()
 	
+	if GameManager.CURRENT_LEVEL % 5 == 0:
+		pass
+	
 	if GameManager.TOTAL_DEFEATED_MONSTER == GameManager.TOTAL_CURRENT_MONSTER:
 		GameManager.CURRENT_LEVEL += 1
 		GameManager.TOTAL_CURRENT_MONSTER = 0

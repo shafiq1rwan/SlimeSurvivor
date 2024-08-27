@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://fdtou3s0nwts"]
+[gd_scene load_steps=10 format=3 uid="uid://fdtou3s0nwts"]
 
 [ext_resource type="Script" path="res://game/game.gd" id="1_ixp5m"]
 [ext_resource type="PackedScene" uid="uid://bu3aixg7n3elv" path="res://game/player.tscn" id="1_ru1y4"]
@@ -30,6 +30,9 @@ corner_radius_top_left = 5
 corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n80gm"]
+bg_color = Color(0.913725, 0.913725, 0.913725, 0.858824)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lc5dm"]
 bg_color = Color(1, 1, 1, 1)
@@ -66,16 +69,16 @@ position = Vector2(139, 549)
 position = Vector2(1007, 611)
 
 [node name="Tree4" parent="." instance=ExtResource("2_4s281")]
-position = Vector2(915, 217)
+position = Vector2(942, 186)
 
 [node name="Tree5" parent="." instance=ExtResource("2_4s281")]
-position = Vector2(979, 255)
+position = Vector2(1017, 257)
 
 [node name="Tree6" parent="." instance=ExtResource("2_4s281")]
-position = Vector2(869, 287)
+position = Vector2(865, 259)
 
 [node name="Tree7" parent="." instance=ExtResource("2_4s281")]
-position = Vector2(1223, 91)
+position = Vector2(1324, 80)
 
 [node name="Tree8" parent="." instance=ExtResource("2_4s281")]
 position = Vector2(-143, -2)
@@ -84,7 +87,7 @@ position = Vector2(-143, -2)
 position = Vector2(-54, 270)
 
 [node name="Tree10" parent="." instance=ExtResource("2_4s281")]
-position = Vector2(644, 768)
+position = Vector2(710, 750)
 
 [node name="Tree11" parent="." instance=ExtResource("2_4s281")]
 position = Vector2(590, 807)
@@ -99,10 +102,10 @@ position = Vector2(569, -40)
 position = Vector2(-205, 678)
 
 [node name="Tree15" parent="." instance=ExtResource("2_4s281")]
-position = Vector2(1009, 10)
+position = Vector2(1031, -28)
 
 [node name="Tree16" parent="." instance=ExtResource("2_4s281")]
-position = Vector2(163, 748)
+position = Vector2(71, 596)
 
 [node name="Tree17" parent="." instance=ExtResource("2_4s281")]
 position = Vector2(1253, 825)
@@ -153,9 +156,22 @@ theme_override_colors/font_color = Color(0.12549, 0.12549, 0.12549, 0.870588)
 theme_override_font_sizes/font_size = 20
 text = "Level: 1"
 
+[node name="Button" type="Button" parent="HUD"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -119.0
+offset_top = 10.0
+offset_right = -8.0
+offset_bottom = 52.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_n80gm")
+text = "Pause"
+
 [node name="Tiles" type="CanvasLayer" parent="."]
 layer = -10
-visible = false
 
 [node name="ColorRect" type="ColorRect" parent="Tiles"]
 offset_right = 1284.0
