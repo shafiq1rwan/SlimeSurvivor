@@ -181,7 +181,6 @@ text = "Pause"
 
 [node name="Tiles" type="CanvasLayer" parent="."]
 layer = -10
-visible = false
 
 [node name="ColorRect" type="ColorRect" parent="Tiles"]
 offset_right = 1284.0
