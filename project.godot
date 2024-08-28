@@ -91,6 +91,8 @@ GameManager="*res://game/game_manager.gd"
 window/size/viewport_width=1280
 window/size/viewport_height=720
 window/stretch/mode="viewport"
+mouse_cursor/custom_image="res://cursor/crosshair182.png"
+mouse_cursor/custom_image_hotspot=Vector2(0, 10)
 
 [dotnet]
 

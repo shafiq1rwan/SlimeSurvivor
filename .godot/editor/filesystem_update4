@@ -1,9 +1,1 @@
 res://game/game.tscn
-res://game/game.gd
-res://game/player.tscn
-res://game/pistol.tscn
-res://game/slime_mob.tscn
-res://game/tree.tscn
-res://characters/slime/slime.tscn
-res://pistol/impact_mob/impact_mob.tscn
-res://game/slime_boss.tscn
