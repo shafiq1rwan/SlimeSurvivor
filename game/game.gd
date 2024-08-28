@@ -50,3 +50,6 @@ func _on_resume_button_pressed():
 	%PausedScreen.visible = false
 	Engine.time_scale = 1
 	is_paused = !is_paused
+
+func _on_restart_button_pressed():
+	get_tree().reload_current_scene()
